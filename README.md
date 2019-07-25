@@ -1,3 +1,8 @@
+I created this fork because I have some ideas to make the Tetris game more friendly both with PC and mobile devices.  This is my first time to do anything on the devolopment side of github.
+
+I am self-taught in Javascript, HTML, and CSS on an as needed basis.  I am personally interested in this project to make the Tetris app available for use on Oculus Quest as part of my own Amblyopia treatment.
+
+My necessary goals for my intended use are to change the gamepad mapping to use an Xbox controller and to add the abilities to start the game, enter VR, and reset the game using the gamepad or at least clickable buttons so that this app will be mobile friendly.
 
 # Amblyopia (Lazy Eye) WebVR Polyfill examples. 
 This site contains a number of example WebVR Programs that show the potential of 
