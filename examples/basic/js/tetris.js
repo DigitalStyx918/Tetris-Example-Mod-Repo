@@ -244,25 +244,25 @@ Tetris.animate = function () {
 					var gp = navigator.getGamepads()[0];
 					var axeLF = gp.axes[0];
 					var axeUP = gp.axes[1];
-//Gamepad controls to start the game, enter VR, Enter Fullscreen
+// Gamepad controls to start the game, enter VR, Enter Fullscreen
 // Adding Button gamepad press to enter VR	
 				//if (gp.buttons[11].pressed) {
-						//If (Tetris.vrDisplay !== null){
+						// If (Tetris.vrDisplay !== null){
 							//Tetris.vrDisplay.requestPresent([{source: Tetris.renderer.domElement}]);
-						//};
+						// };
 				//};
 // Adding Button gamepad press to start game
 				if (gp.buttons[8].pressed) { 
 						        Tetris.start();						
-					}
+					};
 // Adding Button gamepad press to enter fullscreen
 				if (gp.buttons[10].pressed) { 
 						        enterFullscreen(Tetris.renderer.domElement);						
-						}
+						};
 // Adding Button gamepad press to reset
 				if (gp.buttons[9].pressed) { 
 						        location.reload(forceGet);						
-						}		
+						};		
 //right and left and forward and back rotations mapped to Xbox right hand buttons
 
 					// left - right rotation
