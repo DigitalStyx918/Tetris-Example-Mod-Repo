@@ -1,5 +1,4 @@
 // Three.js r46 - http://github.com/mrdoob/three.js
-Access-Control-Allow-Origin: *
 var THREE = THREE || {};
 if (!self.Int32Array)self.Int32Array = Array, self.Float32Array = Array;
 THREE.Clock = function (a) {
