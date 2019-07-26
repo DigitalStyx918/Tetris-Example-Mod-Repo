@@ -234,7 +234,7 @@ Tetris.animate = function () {
     Tetris._lastFrameTime = time;
     Tetris.cumulatedFrameTime += Tetris.frameTime;
 	Tetris.controls.update();
-}
+};
 // BKL Adding HTML5 GAMEPAD READ
 	if (gamepadconnected == 1) {
 					var gp = navigator.getGamepads()[0];
