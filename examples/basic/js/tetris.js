@@ -151,11 +151,11 @@ Tetris.init = function () {
 window.addEventListener("gamepadconnected", function() {
 	var gp = navigator.getGamepads()[0];
 	// testing to make sure connected controller has enough buttons and axis for control - this code tested only with PS4 controller
-	if (gp.buttons.length > 8) {
-		if (gp.axes.length > 1) {
-				gamepadconnected = 1;
-		}
-	}
+	//if (gp.buttons.length > 8) {
+	//	if (gp.axes.length > 1) {
+	//			gamepadconnected = 1;
+	//	}
+	//}
 });
 
 };
@@ -164,8 +164,8 @@ window.addEventListener("gamepaddisconnected", function(e) {
 });
 if (gamepadconnected == 1) {
 					var gp = navigator.getGamepads()[0];
-					var axeLF = gp.axes[0];
-					var axeUP = gp.axes[1];
+					//var axeLF = gp.axes[0];
+					//var axeUP = gp.axes[1];
 //Gamepad controls to start the game, enter VR, Enter Fullscreen
 // Adding Button gamepad press to enter VR	
 				if (gp.buttons[11].pressed) { 
@@ -237,8 +237,8 @@ Tetris.animate = function () {
 // BKL Adding HTML5 GAMEPAD READ
 	if (gamepadconnected == 1) {
 					var gp = navigator.getGamepads()[0];
-					var axeLF = gp.axes[0];
-					var axeUP = gp.axes[1];
+					//var axeLF = gp.axes[0];
+					//var axeUP = gp.axes[1];
 //Gamepad controls to start the game, enter VR, Enter Fullscreen
 // Adding Button gamepad press to enter VR	
 				if (gp.buttons[11].pressed) { 
