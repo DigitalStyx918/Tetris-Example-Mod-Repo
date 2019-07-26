@@ -246,23 +246,23 @@ Tetris.animate = function () {
 					var axeUP = gp.axes[1];
 // Gamepad controls to start the game, enter VR, Enter Fullscreen
 // Adding Button gamepad press to enter VR	
-				//if (gp.buttons[11].pressed) {
-						// If (Tetris.vrDisplay !== null){
-							//Tetris.vrDisplay.requestPresent([{source: Tetris.renderer.domElement}]);
-						// };
-				//};
+				if (gp.buttons[11].pressed) {
+							Tetris.vrDisplay.requestPresent([{source: Tetris.renderer.domElement}]);
+							enterFullscreen(Tetris.renderer.domElement);
+				}
 // Adding Button gamepad press to start game
 				if (gp.buttons[8].pressed) { 
 						        Tetris.start();						
-					};
+				}
 // Adding Button gamepad press to enter fullscreen
 				if (gp.buttons[10].pressed) { 
-						        enterFullscreen(Tetris.renderer.domElement);						
-						};
+					     Tetris.vrDisplay.requestPresent([{source: Tetris.renderer.domElement}]);
+						enterFullscreen(Tetris.renderer.domElement);						
+				}
 // Adding Button gamepad press to reset
 				if (gp.buttons[9].pressed) { 
-						        location.reload(forceGet);						
-						};		
+						        window.location.reload();						
+						}		
 //right and left and forward and back rotations mapped to Xbox right hand buttons
 
 					// left - right rotation
@@ -406,6 +406,11 @@ Tetris.animate = function () {
 	// BKL    if (!Tetris.gameOver) window.requestAnimationFrame(Tetris.animate);
 	if (!Tetris.gameOver) Tetris.vrDisplay.requestAnimationFrame(Tetris.animate);
 };
+
+document.querySelector('play_button').addEventListener('click', function() {
+	Tetris.start();
+});
+document.getElementById("play_button")
 
 //BKL  - adding Button click handlers for VR.
 document.querySelector('button#fullscreen').addEventListener('click', function() {
