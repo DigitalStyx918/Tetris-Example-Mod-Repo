@@ -158,10 +158,10 @@ Tetris.init = function () {
 	//}
 //});
 
-};
-window.addEventListener("gamepaddisconnected", function(e) {
-    	gamepadconnected = 0;
-});
+//};
+//window.addEventListener("gamepaddisconnected", function(e) {
+    	//gamepadconnected = 0;
+//});
 //if (gamepadconnected == 1) {
 //					var gp = navigator.getGamepads()[0];
 					//var axeLF = gp.axes[0];
