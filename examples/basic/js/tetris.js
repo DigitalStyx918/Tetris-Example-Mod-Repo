@@ -176,7 +176,7 @@ if (gamepadconnected == 1) {
 						
 						//Tetris.vrDisplay.requestPresent([{source: Tetris.renderer.domElement}]);						
 					//}
- Adding Button gamepad press to start game
+ //Adding Button gamepad press to start game
 				if (gp.buttons[8].pressed) {							
 						        Tetris.start();						
 					}
