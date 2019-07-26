@@ -147,6 +147,7 @@ Tetris.init = function () {
         Tetris.start();
     });
 };
+
 Tetris.start = function () {
     document.getElementById("menu").style.display = "none";
     Tetris.pointsDOM = document.getElementById("points");
