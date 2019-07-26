@@ -142,10 +142,10 @@ Tetris.init = function () {
 // BKL Use to disable stat window 	
 //    document.body.appendChild(Tetris.stats.domElement);
 
-    document.getElementById("play_button").addEventListener('click', function (event) {
-        event.preventDefault();
-        Tetris.start();
-    });
+    //document.getElementById("play_button").addEventListener('click', function (event) {
+        //event.preventDefault();
+        //Tetris.start();
+   // });
 
 //adding gamepad handlers to init to allow for gamepad start of game
 window.addEventListener("gamepadconnected", function(e) {
@@ -407,11 +407,9 @@ Tetris.animate = function () {
 	if (!Tetris.gameOver) Tetris.vrDisplay.requestAnimationFrame(Tetris.animate);
 };
 
-document.querySelector('play_button').addEventListener('click', function() {
+document.querySelector('button#play').addEventListener('click', function() {
 	Tetris.start();
 });
-document.getElementById("play_button")
-
 //BKL  - adding Button click handlers for VR.
 document.querySelector('button#fullscreen').addEventListener('click', function() {
   enterFullscreen(Tetris.renderer.domElement);
