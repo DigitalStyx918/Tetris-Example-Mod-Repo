@@ -246,11 +246,11 @@ Tetris.animate = function () {
 					var axeUP = gp.axes[1];
 //Gamepad controls to start the game, enter VR, Enter Fullscreen
 // Adding Button gamepad press to enter VR	
-				if (gp.buttons[11].pressed) {
-						If (Tetris.vrDisplay !== null){
-							Tetris.vrDisplay.requestPresent([{source: Tetris.renderer.domElement}]);
-						};
-				};
+				//if (gp.buttons[11].pressed) {
+						//If (Tetris.vrDisplay !== null){
+							//Tetris.vrDisplay.requestPresent([{source: Tetris.renderer.domElement}]);
+						//};
+				//};
 // Adding Button gamepad press to start game
 				if (gp.buttons[8].pressed) { 
 						        Tetris.start();						
