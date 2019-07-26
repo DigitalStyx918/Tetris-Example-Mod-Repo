@@ -351,7 +351,8 @@ Tetris.animate = function () {
 					} else if (gp.buttons[5].pressed) { 
 						if (flipflop5 == 0) {
 							Tetris.Block.rotate(0, 0, -90);
-							flipflop5 = 1;			
+							flipflop5 = 1;
+						}	
 					} else {
 						flipflop5 = 0 ;
 					}
