@@ -152,7 +152,7 @@ window.addEventListener("gamepadconnected", function(e) {
   	console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
     	e.gamepad.index, e.gamepad.id,
     	e.gamepad.buttons.length, e.gamepad.axes.length);
-	var gp = navigator.getGamepads()[0];
+	var gp = navigator.getGamepads(e)[0];
 	// testing to make sure connected controller has enough buttons and axis for control - this code tested only with PS4 controller
 	if (gp.buttons.length > 8) {
 		if (gp.axes.length > 1) {
@@ -167,27 +167,28 @@ window.addEventListener("gamepaddisconnected", function(e) {
     e.gamepad.index, e.gamepad.id);
 });
 if (gamepadconnected == 1) {
-					var gp = navigator.getGamepads()[0];
+					var gp = navigator.getGamepads(e)[0];
 					var axeLF = gp.axes[0];
 					var axeUP = gp.axes[1];
 //Gamepad controls to start the game, enter VR, Enter Fullscreen
 // Adding Button gamepad press to enter VR	
-				if (gp.buttons[11].pressed) { 
-						Tetris.vrDisplay.requestPresent([{source: Tetris.renderer.domElement}]);						
-					}
-// Adding Button gamepad press to start game
-				if (gp.buttons[8].pressed) { 
+				//if (gp.buttons[11].pressed) {
+						
+						//Tetris.vrDisplay.requestPresent([{source: Tetris.renderer.domElement}]);						
+					//}
+ Adding Button gamepad press to start game
+				if (gp.buttons[8].pressed) {							
 						        Tetris.start();						
 					}
 // Adding Button gamepad press to enter fullscreen
-				if (gp.buttons[10].pressed) { 
-						        enterFullscreen(Tetris.renderer.domElement);						
-						}
+				//if (gp.buttons[10].pressed) { 
+						        //enterFullscreen(Tetris.renderer.domElement);						
+						//}
 // Adding Button gamepad press to reset
-				if (gp.buttons[9].pressed) { 
-						        Tetris.init();						
-						}
-				}
+				//if (gp.buttons[9].pressed) { 
+						        //tris.init();						
+					//}
+			}
 
 
 Tetris.start = function () {
@@ -245,9 +246,13 @@ Tetris.animate = function () {
 					var axeUP = gp.axes[1];
 //Gamepad controls to start the game, enter VR, Enter Fullscreen
 // Adding Button gamepad press to enter VR	
-				if (gp.buttons[11].pressed) { 
+				if (gp.buttons[11].pressed) {
+						If (Tetris.vrDisplay == null){
+							return;
+						} else {
 						Tetris.vrDisplay.requestPresent([{source: Tetris.renderer.domElement}]);						
-					}
+					};
+				};
 // Adding Button gamepad press to start game
 				if (gp.buttons[8].pressed) { 
 						        Tetris.start();						
@@ -258,7 +263,7 @@ Tetris.animate = function () {
 						}
 // Adding Button gamepad press to reset
 				if (gp.buttons[9].pressed) { 
-						        Tetris.init();						
+						        location.reload(forceGet);						
 						}		
 //right and left and forward and back rotations mapped to Xbox right hand buttons
 
@@ -301,19 +306,19 @@ Tetris.animate = function () {
 					
 // Mapping Block Movement to Xbox Dpad				
 //Move Right	
-					if(gp.buttons[13].pressed) {
+					if(gp.buttons[14].pressed) {
 						if (flipflop == 0) {
 							Tetris.Block.move(-1, 0, 0);
 							flipflop = 1;
 						}	
 //Move Left					
-					} else if (gp.buttons[14].pressed) { 
+					} else if (gp.buttons[15].pressed) { 
 						if (flipflop == 0) {
 							Tetris.Block.move(1, 0, 0);
 							flipflop = 1;
 						}
 //Move Down	
-					} else if (gp.buttons[15].pressed) { 
+					} else if (gp.buttons[13].pressed) { 
 						if (flipflop == 0) {
 							Tetris.Block.move(0, -1, 0);
 							flipflop = 1;
